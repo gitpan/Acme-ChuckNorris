@@ -1,9 +1,12 @@
 package Acme::ChuckNorris;
 
-$Acme::ChuckNorris::VERSION = '0.1';
+use strict;
+use warnings;
+
+$Acme::ChuckNorris::VERSION = '0.2';
 
 sub import {
-    no strict 'refs';
+    no strict 'refs';    ## no critic
     *{ caller() . '::round_house_kick_to_the_perl' } = \&round_house_kick_to_the_perl;
     *{ caller() . '::round_house_kick_to_the_text' } = \&round_house_kick_to_the_text;
 }
@@ -54,7 +57,7 @@ sub round_house_kick_to_the_perl {
     );
 }
 
-1;
+'When Chuck Norris is SCUBA diving and surfaces too fast the ocean gets the bends.';    # return true, so very very true
 
 __DATA__
                                                                                                                                                 

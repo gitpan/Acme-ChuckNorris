@@ -27,5 +27,9 @@ SKIP: {
     }
 }
 
-ok( $chuck !~ m/eval/ && round_house_kick_to_the_perl( \q{print "Ka POW"}, 'Regex' => 0 ) =~ m/eval/, 'allowed arg override works' );
+my $codenorris = round_house_kick_to_the_perl( \q{print "Ka POW"}, 'Regex' => 0 );
+my $_chuck = $chuck;
+$_chuck =~ s/use\s+re\s+.eval.//;        # hack to allow this test to work in v5.18
+$codenorris =~ s/use\s+re\s+.eval.//;    # hack to allow this test to work in v5.18
+ok( $_chuck !~ m/eval/ && $codenorris =~ m/eval/, 'allowed arg override works' );
 ok( round_house_kick_to_the_text( \q{Howdy}, 'Print' => 0 ), 'disallowed arg override has no effect' );
