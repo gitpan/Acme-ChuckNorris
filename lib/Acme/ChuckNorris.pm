@@ -3,7 +3,7 @@ package Acme::ChuckNorris;
 use strict;
 use warnings;
 
-$Acme::ChuckNorris::VERSION = '0.2';
+$Acme::ChuckNorris::VERSION = '0.3';
 
 sub import {
     no strict 'refs';    ## no critic

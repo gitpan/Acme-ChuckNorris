@@ -1,10 +1,12 @@
+=encoding utf8
+
 =head1 NAME
 
 Acme::ChuckNorris - Perl prefers to code in Chuck Norris
 
 =head1 VERSION
 
-This document describes Acme::ChuckNorris version 0.2
+This document describes Acme::ChuckNorris version 0.3
 
 =head1 SYNOPSIS
 
